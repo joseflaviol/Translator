@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="José FLávio Lopes">
+    <meta name="twitter:" content="@joseflaviol">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/poppins.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'js/responsivevoice.js' %}" charset="utf-8"></script>
+    <title>TRADUTOR</title>
+    <style media="screen">
+      body{
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body id="body">
+    {% block body %}
+
+    {% endblock %}
+    <script src="{% static 'js/funcoes.js' %}" charset="utf-8"></script>
+  </body>
+</html>

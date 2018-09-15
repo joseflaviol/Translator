@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Tradutor</h1>
+    </div>
+    <div class="col">
+      <button class="btn btn-default mt-2" type="button" name="theme" id="btn_theme" value="0">Usar tema escuro</button>
+      <button class="btn btn-default mt-2" type="button" name="modo" id="btn_modo" value="0">Usar modo manual</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <select class="form-control-sm mb-2" name="languages" id="lang1">
+        <optgroup label="Idiomas">
+          {% for i in idiomas %}
+          <option value="{{i.id}}">{{i.idioma}}</option>
+          {% endfor %}
+        </optgroup>
+      </select>
+    </div>
+    <div class="col-sm">
+      <select class="form-control-sm mb-2" name="languages" id="lang2">
+        <optgroup label="Idiomas">
+          {% for i in idiomas %}
+          <option value="{{i.id}}">{{i.idioma}}</option>
+          {% endfor %}
+        </optgroup>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <textarea class="form-control" name="name" id="texto" rows="8" cols="80"></textarea>
+      <button class=" btn btn-default mt-3" type="button" name="traduzir" id="btn_traduz" style="display:none;">Traduzir</button>
+    </div>
+    <div class="col-sm">
+      <textarea class="form-control" name="name" id="traducao" rows="8" cols="80" readonly></textarea>
+      <button class="btn btn-default mt-3" type="button" name="ouvir" id="btn_ouvir"><i class="fa fa-volume-up"></i> Ouvir</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
